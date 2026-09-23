@@ -10,5 +10,5 @@ public interface RepositoryRepuesto extends JpaRepository<Repuesto, Integer> {
 
     public List<Repuesto> findByMarcaContainingIgnoreCase(String marca);
 
-    public List<Repuesto> findByNombreContainingIgnoreCaseOrfindByMarcaContainingIgnoreCase(String nombre, String marca);
+    public List<Repuesto> findByNombreContainingIgnoreCaseOrMarcaContainingIgnoreCase(String nombre, String marca);
 }

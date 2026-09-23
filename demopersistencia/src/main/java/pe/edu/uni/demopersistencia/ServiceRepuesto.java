@@ -42,7 +42,7 @@ public class ServiceRepuesto {
     }
 
     public List<ResponseRepuestoMarca> consultarPorNombreMarcaSubcadena(String nombre, String marca) {
-        List<Repuesto> lst = repoRepuesto.findByNombreContainingIgnoreCaseOrfindByMarcaContainingIgnoreCase(nombre, marca);
+        List<Repuesto> lst = repoRepuesto.findByNombreContainingIgnoreCaseOrMarcaContainingIgnoreCase(nombre, marca);
         List<ResponseRepuestoMarca> lstResponse = lst.stream().map(r->new ResponseRepuestoMarca(r.getId(), r.getNombre(), r.getMarca())).toList();
         return lstResponse;
     }
